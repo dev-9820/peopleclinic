@@ -155,35 +155,35 @@ function LandingPage() {
       )}
     
           {/* About Doctor Section */}
-<section className="flex flex-col   bg-[#ffffff] h-screen pt-10 text-center px-6 md:px-0">
-  <img src={logo} alt="Doctor" className="absolute z-10 w-96 ml-40" />
+<section className="flex flex-col bg-[#ffffff] h-screen md:pt-10 text-center md:px-0">
+  <img src={logo} alt="Doctor" className="absolute z-10 ml-5 w-60 pt-10 md:pt-0 md:w-96 md:ml-40" />
   <motion.div 
     initial={{ opacity: 0, y: 50 }} 
     animate={{ opacity: 1, y: 0 }} 
     transition={{ duration: 0.8 }}
-    className="bg-[#FDEFFF] border-b-12  w-full p-6 h-180 my-auto"
+    className="bg-[#FDEFFF] w-full md:p-6 h-180 my-auto"
   >
     
-    <div className="flex flex-col text-black md:flex-row items-center md:justify-between">
+    <div className="md:flex flex-col text-black md:flex-row items-center md:justify-between">
       <div className="text-center md:text-left md:w-2/3">
       <div className='mt-20'>
-        <h2 className="text-2xl md:text-6xl md:ml-24">Welcome to</h2>
+        <h2 className="text-3xl md:text-6xl md:ml-24">Welcome to</h2>
       </div>
-        <p className="md:ml-24 text-lg md:text-8xl font-bold mt-2">
+        <p className="md:ml-24 text-4xl md:text-8xl font-bold mt-2">
           Parvathy Peoples <p> <span className='text-[#5A2F88]'> Clinic </span> & <span className='text-[#D62164]'> Pharmacy </span> </p>
         </p>
 
-        <div className='border-black border-1 ml-24 w-60 my-20'></div>
+        <div className='border-black border-1 mx-auto md:ml-24 w-60 md:my-20 my-10'></div>
 
-        <p className="md:ml-24 text-lg md:text-4xl mt-5">
+        <p className="md:ml-24 text-xl md:text-4xl mt-5">
           Bringing Affordable, Quality <p> Healthcare to Your Community </p>
         </p>
 
       </div>
-      
-      <img src={option6} alt="Doctor" className="absolute right-0 mt-42 w-48 z-10 h-48 md:w-200 -z-10  md:h-200 object-cover " />
-      <img src={option7} alt="Doctor"  className="w-48 z-20 h-48 md:w-210  md:h-96 translate-x-6 object-cover object-top " />
-      <img src={option8} alt="Doctor" style={{ filter: 'drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3))' }} className="absolute right-2 mt-32 w-48 z-20 h-48 md:w-175 md:h-170 object-cover object-top " />
+        
+      <img src={option6} alt="Doctor" className="absolute md:right-0 mt-42 w-100 z-10 h-100 md:w-200 -z-10  md:h-200 object-cover " />
+      <img src={option7} alt="Doctor"  className="w-88 z-20 h-88 md:w-210  md:h-96 translate-x-5 object-cover object-top " />
+      <img src={option8} alt="Doctor" style={{ filter: 'drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3))' }} className="absolute ml-5 md:right-2 bottom-28 md:mt-32 w-82 z-20 h-82 md:w-175 md:h-170 object-cover object-top " />
     </div>
   </motion.div>
 
@@ -287,7 +287,7 @@ function LandingPage() {
       {/* Benefits Section */}
       <section className="py-24 bg-[url('/public/bg2.jpg')] custom-bg opacity-90 h-screen bg-cover bg-bottom ">
       
-        <div className="max-w-7xl mx-auto px-6">
+        <div className="md:max-w-7xl md:mx-auto md:px-6">
           <motion.h2 
             initial="hidden"
             whileInView="visible"
@@ -295,19 +295,19 @@ function LandingPage() {
             viewport={{ once: true }}
             className="md:text-3xl my-5 text-2xl font-semibold text-center text-transparent bg-clip-text bg-white mb-20"
           >
-              <p className='my-5 text-black'>Since 1992, Parvathy Hospital has been a trusted name in healthcare, having treated over</p>
+              <p className='my-5 text-lg md:text-2xl text-black'>Since 1992, Parvathy Hospital has been a trusted name in healthcare, having treated over</p>
             <p 
-  className="text-[175px] font-bold text-[#582E86] tracking-tighter " 
+  className="text-8xl md:text-[175px] font-bold text-[#582E86] tracking-tighter " 
   style={{ textShadow: '4px 4px 10px rgba(88, 46, 134, 0.7)' }}
 >
   50,000+ 
 
 </p>
-<span className="block font-semibold tracking-[30px] text-6xl mt-5 drop-shadow- text-black uppercase">
+<span className="block font-semibold md:tracking-[30px] tracking-[15px] text-4xl md:text-6xl mt-5 drop-shadow- text-black uppercase">
     patients
   </span>
 
-            <p className='text-2xl mt-10 font-normal text-black  justify-self-center'>Now, we’re bringing the same compassionate, affordable care closer to you—right in your neighborhood, with branches in <span className='font-bold'>Madambakkam, Pammal, and Guduvanchery. </span> </p>
+            <p className='md:text-2xl text-xl  mt-10 font-normal text-black'>Now, we’re bringing the same compassionate, affordable care closer to you—right in your neighborhood, with branches in <span className='font-bold'>Madambakkam, Pammal, and Guduvanchery. </span> </p>
             <button type='submit' className="mt-6 bg-[#D62164] text-lg text-white px-6 py-3 rounded-xs mt-20 hover:scale-105 transition-all">
       Get Treated Today
     </button>
@@ -392,119 +392,119 @@ function LandingPage() {
 export default LandingPage;
 
 
-const TestimonialSlider = () => {
-  const testimonials = [
-    {
-      id: 1,
-      name: "Menagapriya Munuswamy",
-      time: "4 months ago",
-      content: "Dr. Sai vigneshvar is one of the best doctor in Chromepet. He is listening all our queries very patiently and explain the solution very well.So I highly recommend Chromepet medical center for anyone seeking best medical care."
-    },
-    {
-      id: 2,
-      name: "Hema Hema",
-      time: "7 months ago",
-      content: "I had serious stomach upset. That is the first time I checked out with Dr. Sai Vigneshwar Sir, he is so patient in listening to. After I started with the medications referred, I felt so much releaf from pain. Thank you Sir. Let Sai Baba showers his blessings on you. 🙏"
-    },
-    {
-      id: 3,
-      name: "Pradeesh Guna",
-      time: "2 years ago",
-      content: "This review has been posted after the 4th consulting experience with Dr. Sai Vigneshwar. Being in the fitness industry, I have the opportunity to learn some up to date research papers on human health and wellness. Particularly on diabetics and lifestyle disorders. The suggestions, answers and the way of approach is very different from other doctors."
-    },
-    {
-      id: 4,
-      name: "Preethi s",
-      time: "a year ago",
-      content: "Dr Sai Vigneshvar is one of the most trust worthy doctors I have come across. He has a great approach towards his patients and gives us a feeling of comfort. He listens and addresses all our concerns patiently, that too for a person like me who has never ending questions and doubts."
-    },
-    {
-      id: 5,
-      name: "Sindhu Machado",
-      time: "10 months ago",
-      content: "Dr. Sai Vigneshwar is an approachable person he lends ears to all doubts. We a family of 9 including aged diabetic n hypertension patients got treated for Covid. Giving personal attention, he was all throughout suggesting practical lifestyle changes."
-    },
-    {
-      id: 6,
-      name: "Sadam Sadam",
-      time: "11 months ago",
-      content: "Dr Sai was an amazing person to give faithful trust on us💯 when ever we meet Him. I feel like totally curing my diabetes symtm. The pricing is also so reasonable and hence I highly recommend this place."
-    }
-  ];
+// const TestimonialSlider = () => {
+//   const testimonials = [
+//     {
+//       id: 1,
+//       name: "Menagapriya Munuswamy",
+//       time: "4 months ago",
+//       content: "Dr. Sai vigneshvar is one of the best doctor in Chromepet. He is listening all our queries very patiently and explain the solution very well.So I highly recommend Chromepet medical center for anyone seeking best medical care."
+//     },
+//     {
+//       id: 2,
+//       name: "Hema Hema",
+//       time: "7 months ago",
+//       content: "I had serious stomach upset. That is the first time I checked out with Dr. Sai Vigneshwar Sir, he is so patient in listening to. After I started with the medications referred, I felt so much releaf from pain. Thank you Sir. Let Sai Baba showers his blessings on you. 🙏"
+//     },
+//     {
+//       id: 3,
+//       name: "Pradeesh Guna",
+//       time: "2 years ago",
+//       content: "This review has been posted after the 4th consulting experience with Dr. Sai Vigneshwar. Being in the fitness industry, I have the opportunity to learn some up to date research papers on human health and wellness. Particularly on diabetics and lifestyle disorders. The suggestions, answers and the way of approach is very different from other doctors."
+//     },
+//     {
+//       id: 4,
+//       name: "Preethi s",
+//       time: "a year ago",
+//       content: "Dr Sai Vigneshvar is one of the most trust worthy doctors I have come across. He has a great approach towards his patients and gives us a feeling of comfort. He listens and addresses all our concerns patiently, that too for a person like me who has never ending questions and doubts."
+//     },
+//     {
+//       id: 5,
+//       name: "Sindhu Machado",
+//       time: "10 months ago",
+//       content: "Dr. Sai Vigneshwar is an approachable person he lends ears to all doubts. We a family of 9 including aged diabetic n hypertension patients got treated for Covid. Giving personal attention, he was all throughout suggesting practical lifestyle changes."
+//     },
+//     {
+//       id: 6,
+//       name: "Sadam Sadam",
+//       time: "11 months ago",
+//       content: "Dr Sai was an amazing person to give faithful trust on us💯 when ever we meet Him. I feel like totally curing my diabetes symtm. The pricing is also so reasonable and hence I highly recommend this place."
+//     }
+//   ];
 
-  const sliderRef = useRef(null);
-  const [currentIndex, setCurrentIndex] = useState(0);
+//   const sliderRef = useRef(null);
+//   const [currentIndex, setCurrentIndex] = useState(0);
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => 
-        prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
-      );
-    }, 5000); // Change slide every 5 seconds
+//   useEffect(() => {
+//     const interval = setInterval(() => {
+//       setCurrentIndex((prevIndex) => 
+//         prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
+//       );
+//     }, 5000); // Change slide every 5 seconds
 
-    return () => clearInterval(interval);
-  }, [testimonials.length]);
+//     return () => clearInterval(interval);
+//   }, [testimonials.length]);
 
-  return (
-    <section className="py-16 bg-[#08081b] relative overflow-hidden">
-      <div className="max-w-7xl mx-auto px-6">
-        <motion.h2 
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-4xl md:text-5xl font-bold text-center text-white mb-16"
-        >
-          Patient <span className="text-yellow-500">Testimonials</span>
-        </motion.h2>
+//   return (
+//     <section className="py-16 bg-[#08081b] relative overflow-hidden">
+//       <div className="max-w-7xl mx-auto px-6">
+//         <motion.h2 
+//           initial={{ opacity: 0, y: 20 }}
+//           whileInView={{ opacity: 1, y: 0 }}
+//           transition={{ duration: 0.6 }}
+//           viewport={{ once: true }}
+//           className="text-4xl md:text-5xl font-bold text-center text-white mb-16"
+//         >
+//           Patient <span className="text-yellow-500">Testimonials</span>
+//         </motion.h2>
 
-        <div className="relative h-96 md:h-80">
-          {testimonials.map((testimonial, index) => (
-            <motion.div
-              key={testimonial.id}
-              className={`absolute inset-0 p-6 md:p-8 rounded-2xl bg-gradient-to-br from-[#1a1ac1] to-[#15243B] border border-gray-600 shadow-xl flex flex-col ${
-                index === currentIndex ? 'z-10' : 'z-0'
-              }`}
-              initial={{ opacity: 0, x: index === currentIndex ? 0 : (index < currentIndex ? -100 : 100) }}
-              animate={{ 
-                opacity: index === currentIndex ? 1 : 0.3,
-                x: index === currentIndex ? 0 : (index < currentIndex ? -50 : 50),
-                scale: index === currentIndex ? 1 : 0.9
-              }}
-              transition={{ duration: 0.6, ease: "easeInOut" }}
-            >
-              <div className="flex-1 flex flex-col justify-center">
-                <p className="text-white text-lg md:text-xl mb-6 italic relative">
-                  <span className="absolute top-0 left-0 text-5xl text-yellow-400 opacity-20">"</span>
-                  {testimonial.content}
-                  <span className="absolute bottom-0 right-0 text-5xl text-yellow-400 opacity-20">"</span>
-                </p>
-                <div className="mt-6">
-                  <h4 className="text-yellow-400 text-xl font-semibold">{testimonial.name}</h4>
+//         <div className="relative h-96 md:h-80">
+//           {testimonials.map((testimonial, index) => (
+//             <motion.div
+//               key={testimonial.id}
+//               className={`absolute inset-0 p-6 md:p-8 rounded-2xl bg-gradient-to-br from-[#1a1ac1] to-[#15243B] border border-gray-600 shadow-xl flex flex-col ${
+//                 index === currentIndex ? 'z-10' : 'z-0'
+//               }`}
+//               initial={{ opacity: 0, x: index === currentIndex ? 0 : (index < currentIndex ? -100 : 100) }}
+//               animate={{ 
+//                 opacity: index === currentIndex ? 1 : 0.3,
+//                 x: index === currentIndex ? 0 : (index < currentIndex ? -50 : 50),
+//                 scale: index === currentIndex ? 1 : 0.9
+//               }}
+//               transition={{ duration: 0.6, ease: "easeInOut" }}
+//             >
+//               <div className="flex-1 flex flex-col justify-center">
+//                 <p className="text-white text-lg md:text-xl mb-6 italic relative">
+//                   <span className="absolute top-0 left-0 text-5xl text-yellow-400 opacity-20">"</span>
+//                   {testimonial.content}
+//                   <span className="absolute bottom-0 right-0 text-5xl text-yellow-400 opacity-20">"</span>
+//                 </p>
+//                 <div className="mt-6">
+//                   <h4 className="text-yellow-400 text-xl font-semibold">{testimonial.name}</h4>
                   
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
+//                 </div>
+//               </div>
+//             </motion.div>
+//           ))}
+//         </div>
 
-        <div className="flex justify-center mt-8 space-x-2">
-          {testimonials.map((_, index) => (
-            <button
-              key={index}
-              onClick={() => setCurrentIndex(index)}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                index === currentIndex ? 'bg-yellow-400 w-6' : 'bg-gray-500'
-              }`}
-              aria-label={`Go to testimonial ${index + 1}`}
-            />
-          ))}
-        </div>
-      </div>
+//         <div className="flex justify-center mt-8 space-x-2">
+//           {testimonials.map((_, index) => (
+//             <button
+//               key={index}
+//               onClick={() => setCurrentIndex(index)}
+//               className={`w-3 h-3 rounded-full transition-all duration-300 ${
+//                 index === currentIndex ? 'bg-yellow-400 w-6' : 'bg-gray-500'
+//               }`}
+//               aria-label={`Go to testimonial ${index + 1}`}
+//             />
+//           ))}
+//         </div>
+//       </div>
 
-      {/* Decorative elements */}
-      <div className="absolute -top-20 -left-20 w-64 h-64 rounded-full bg-yellow-400 opacity-10 blur-3xl"></div>
-      <div className="absolute -bottom-20 -right-20 w-64 h-64 rounded-full bg-blue-500 opacity-10 blur-3xl"></div>
-    </section>
-  );
-};
+//       {/* Decorative elements */}
+//       <div className="absolute -top-20 -left-20 w-64 h-64 rounded-full bg-yellow-400 opacity-10 blur-3xl"></div>
+//       <div className="absolute -bottom-20 -right-20 w-64 h-64 rounded-full bg-blue-500 opacity-10 blur-3xl"></div>
+//     </section>
+//   );
+// };

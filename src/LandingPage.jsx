@@ -18,7 +18,7 @@ import icon8 from "./assets/icon8.png"
 import React from 'react';
 import axios from "axios"
 import {useNavigate} from "react-router-dom"
-import option1 from "./assets/ogphoto-removebg.png"
+import option1 from "./assets/tick.png"
 import option2 from "./assets/ogphoto2-removebg.png"
 import option3 from "./assets/ogphoto3-removebg.png"
 import option4 from "./assets/ogphoto4-removebg.png"
@@ -312,199 +312,245 @@ function LandingPage() {
       Get Treated Today
     </button>
           </motion.h2>
-
-          
-          
-         
         </div>
       </section>
 
      
+      {/* What We Offer Section */}
+<section className="py-20 bg-white text-black px-6">
+  <div className="max-w-6xl mx-auto">
+    <motion.h2 
+      initial="hidden"
+      whileInView="visible"
+      variants={fadeIn}
+      viewport={{ once: true }}
+      className="text-2xl md:text-4xl font-bold text-center mb-16"
+    >
+      What We Offer
+    </motion.h2>
 
-      {/* Questionnaire Section */}
-      {/* <section className="py-24 bg-[#08081b]">
-        <div className="max-w-5xl mx-auto px-6 text-center">
-          <motion.div 
-            initial="hidden"
-            whileInView="visible"
-            variants={fadeIn}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl md:text-4xl mb-3">But First...</h2>
-            <h3 className="text-3xl md:text-6xl font-semibold text-white mb-16">I Want to Ask You a <p className=' text-transparent bg-clip-text bg-yellow-500'> Few Questions </p></h3>
-            
-            <div className="text-left space-y-8 mb-16">
-              {[
-                "Do you feel like you'll need to take medicines for the rest of your life just to manage your diabetes?",
-                "Do you constantly fear that your diabetes might lead to other complications, like kidney damage or vision problems?",
-                "Are you afraid of the long-term effects of diabetes and wondering if you'll ever be able to live without constant worry?",
-                "Do you feel like you're at risk of developing serious conditions, and it's becoming hard to stay positive about your future health?",
-                "Are you scared that diabetes could eventually take a toll on your life regretdrug or cause an untimely death?",
-                "Do you feel like diabetes is taking control of your life, leaving little time for other things?",
-                "Are you struggling to maintain your health while juggling your job, home, and other responsibilities?"
-              ].map((question, index) => (
-                <motion.div
-                  key={index}
-                  initial="hidden"
-                  whileInView="visible"
-                  variants={fadeIn}
-                  viewport={{ once: true }}
-                  transition={{ delay: index * 0.05 }}
-                  className="flex items-start bg-[#15243b] p-6 "
-                >
-                  <div className="bg-[#EEB600] rounded-md w-12 h-12 text-5xl flex items-center justify-center mr-4 mt-1 flex-shrink-0">
-                    <span className="text-white font-semibold">?</span>
-                  </div>
-                  <p className="text-xl text-white">{question}</p>
-                </motion.div>
-              ))}
-            </div>
-            
-            <motion.button
-  whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -5px rgba(156, 241, 99, 0.08)" }}
-  whileTap={{ scale: 0.95 }}
-  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-  className="bg-[#eeb600] text-black px-6 md:px-24 py-3 md:py-4 rounded-sm font-bold text-lg md:text-xl shadow-xl hover:shadow-2xl transition-all whitespace-nowrap"
->
-  Book an Appointment
-</motion.button>
-          </motion.div>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-10">
+      {/* Service 1 */}
+      <motion.div 
+        whileHover={{ y: -10 }}
+        className="bg-[#E6D2FF]/70 p-8 max-w-lg shadow-xl shadow-black/25 rounded-lg shadow-md text-center"
+      >
+        <div className="h-84 flex justify-center">
+          <div className="text-[#5A2F88]">
+            <img src={icon1} alt="Service Icon" className="h-40 mt-10 bg-[#582E86] p-6 border-1 rounded-full" />
+          </div>
         </div>
-      </section> */}
+        <h3 className="text-3xl -mt-15 font-bold mx-15 mb-4">Honest, Affordable Consultations</h3>
+        <p className="text-black mx-15 text-lg">
+          Low consultation fees for common ailments. No hidden charges, no unnecessary tests - just honest healthcare you can afford.
+        </p>
+      </motion.div>
 
-      
+      {/* Service 2 */}
+      <motion.div 
+        whileHover={{ y: -10 }}
+        className="max-w-lg bg-[#E6D2FF]/70 p-8 shadow-xl shadow-black/25 rounded-lg shadow-md text-center"
+      >
+        <div className="h-84 flex  justify-center">
+          {/* Space for icon */}
+          <div className="text-[#5A2F88]">
+            <img src={icon2} alt="Service Icon" className="h-40 mt-10 bg-[#582E86] p-6 border-1  rounded-full " />
+          </div>
+        </div>
+        <h3 className="text-3xl mx-15 -mt-15 font-bold mb-4">Generic Medicines That Actually Work</h3>
+        <p className="text-black mx-15 text-lg">
+          Same effectiveness as expensive brands at 50-70% lower cost. Our pharmacist explains exactly why generic works just as well.
+        </p>
+      </motion.div>
 
-    {/* <div className='flex justify-center'>
+      {/* Service 3 */}
+      <motion.div 
+        whileHover={{ y: -10 }}
+        className="max-w-lg bg-[#E6D2FF]/70 p-8 shadow-xl shadow-black/25 rounded-lg shadow-md text-center"
+      >
+        <div className="h-84 flex justify-center">
+          {/* Space for icon */}
+          <div className="text-[#5A2F88]">
+            <img src={icon3} alt="Service Icon" className="h-40 mt-10 bg-[#582E86] p-6 border-1  rounded-full " />
+          </div>
+        </div>
+        <h3 className="text-3xl mx-15 -mt-15 font-bold mb-4">Home Healthcare Services at Budget Prices</h3>
+        <p className="text-black mx-15 text-lg">
+          Home physiotherapy visits for back pain, joint pain, and mobility issues at affordable prices.
+        </p>
+      </motion.div>
+
+      {/* Service 4 */}
+      <motion.div 
+        whileHover={{ y: -10 }}
+        className="max-w-lg bg-[#E6D2FF]/70 p-8 shadow-xl shadow-black/25 rounded-lg shadow-md text-center"
+      >
+        <div className="h-84 flex justify-center">
+          {/* Space for icon */}
+          <div className="text-[#5A2F88]">
+            <img src={icon4} alt="Service Icon" className="h-40 mt-10 bg-[#582E86] p-6 border-1  rounded-full " />
+          </div>
+        </div>
+        <h3 className="text-3xl mx-15 -mt-15 font-bold mb-4">Complete Family Care Under One Roof</h3>
+        <p className="text-black mx-15 text-lg">
+          From newborn care to elderly health management, plus your pet's basic needs - everything your family needs.
+        </p>
+      </motion.div>
+    </div>
+
+    <div className="mt-20 text-center">
       <motion.button
-  whileHover={{ scale: 1.05, boxShadow: "0 10px 25px -5px rgba(156, 241, 99, 0.08)" }}
-  whileTap={{ scale: 0.95 }}
-  onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-  className="bg-[#eeb600] text-black mb-6 -mt-12 px-6 md:px-24 py-3 md:py-4 rounded-sm font-bold text-lg md:text-xl shadow-xl hover:shadow-2xl transition-all whitespace-nowrap"
->
-  Book an Appointment
-</motion.button>
-      </div> */}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="bg-[#D62164] text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-[#5A2F88] transition-colors"
+      >
+        Book Your Affordable Consultation
+      </motion.button>
+    </div>
+  </div>
+</section>
+
+{/* Common Problems Section */}
+<section className="py-20 bg-[#F7F0FF] px-6">
+  <div className="max-w-4xl mx-auto">
+    <motion.h2 
+      initial="hidden"
+      whileInView="visible"
+      variants={fadeIn}
+      viewport={{ once: true }}
+      className="text-3xl text-black md:text-4xl font-bold text-center mb-12"
+    >
+      Are You Facing These Common Healthcare Problems?
+    </motion.h2>
+
+    <motion.p 
+      initial="hidden"
+      whileInView="visible"
+      variants={fadeIn}
+      viewport={{ once: true }}
+      className="text-xl text-black text-center mb-16 italic"
+    >
+      If any of these sound familiar, you're not alone...
+    </motion.p>
+
+    <div className="space-y-4">
+      {/* Problem 1 */}
+      <motion.div 
+        initial="hidden"
+        whileInView="visible"
+        variants={fadeIn}
+        viewport={{ once: true }}
+        className="flex bg-[#582E86] p-4 rounded-lg items-start"
+      >
+        <div className="min-w-[40px] mr-4 flex justify-center">
+          <img src={option1} className="h-8 bg-[#D62164] p-2 rounded-md object-contain" alt="Tick icon"/>
+        </div>
+        <p className="text-white text-lg md:text-xl">
+          Do you postpone visiting the doctor because you're worried about expensive consultation fees and costly medicines?
+        </p>
+      </motion.div>
+
+      {/* Problem 2 */}
+      <motion.div 
+        initial="hidden"
+        whileInView="visible"
+        variants={fadeIn}
+        viewport={{ once: true }}
+        className="flex bg-[#582E86] p-4 rounded-lg items-start"
+      >
+        <div className="min-w-[40px] mr-4 flex justify-center">
+          <img src={option1} className="h-8 bg-[#D62164] p-2 rounded-md object-contain" alt="Tick icon"/>
+        </div>
+        <p className="text-white text-lg md:text-xl">
+          Are you tired of spending $500-800 every time someone in your family catches a simple cold or fever?
+        </p>
+      </motion.div>
+
+      {/* Problem 3 */}
+      <motion.div 
+        initial="hidden"
+        whileInView="visible"
+        variants={fadeIn}
+        viewport={{ once: true }}
+        className="flex bg-[#582E86] p-4 rounded-lg items-start"
+      >
+        <div className="min-w-[40px] mr-4 flex justify-center">
+          <img src={option1} className="h-8 bg-[#D62164] p-2 rounded-md object-contain" alt="Tick icon"/>
+        </div>
+        <p className="text-white text-lg md:text-xl">
+          Do you feel helpless when your child has fever at night, your back is aching, or you need blood tests but all the expensive clinics are closed?
+        </p>
+      </motion.div>
+
+      {/* Problem 4 */}
+      <motion.div 
+        initial="hidden"
+        whileInView="visible"
+        variants={fadeIn}
+        viewport={{ once: true }}
+        className="flex bg-[#582E86] p-4 rounded-lg items-start"
+      >
+        <div className="min-w-[40px] mr-4 flex justify-center">
+          <img src={option1} className="h-8 bg-[#D62164] p-2 rounded-md object-contain" alt="Tick icon"/>
+        </div>
+        <p className="text-white text-lg md:text-xl">
+          Are you frustrated with clinics that order unnecessary tests, charge $500+ for physiotherapy sessions, and make you travel to different places for consultation, medicines, and lab tests?
+        </p>
+      </motion.div>
+
+      {/* Problem 5 */}
+      <motion.div 
+        initial="hidden"
+        whileInView="visible"
+        variants={fadeIn}
+        viewport={{ once: true }}
+        className="flex bg-[#582E86] p-4 rounded-lg items-start"
+      >
+        <div className="min-w-[40px] mr-4 flex justify-center">
+          <img src={option1} className="h-8 bg-[#D62164] p-2 rounded-md object-contain" alt="Tick icon"/>
+        </div>
+        <p className="text-white text-lg md:text-xl">
+          Do you worry about your elderly parents' health - their joint pain, regular blood tests, and mobility issues - but hesitate due to the high cost of home visits and multiple clinic trips?
+        </p>
+      </motion.div>
+
+      {/* Problem 6 */}
+      <motion.div 
+        initial="hidden"
+        whileInView="visible"
+        variants={fadeIn}
+        viewport={{ once: true }}
+        className="flex bg-[#582E86] p-4 rounded-lg items-start"
+      >
+        <div className="min-w-[40px] mr-4 flex justify-center">
+          <img src={option1} className="h-8 bg-[#D62164] p-2 rounded-md object-contain" alt="Tick icon"/>
+        </div>
+        <p className="text-white text-lg md:text-xl">
+          Are you stressed about managing diabetes blood tests, blood pressure check-ups, and physiotherapy for back pain on your tight budget?
+        </p>
+      </motion.div>
+
+      {/* Problem 7 */}
+      <motion.div 
+        initial="hidden"
+        whileInView="visible"
+        variants={fadeIn}
+        viewport={{ once: true }}
+        className="flex bg-[#582E86] p-4 rounded-lg items-start"
+      >
+        <div className="min-w-[40px] mr-4 flex justify-center">
+          <img src={option1} className="h-8 bg-[#D62164] p-2 rounded-md object-contain" alt="Tick icon"/>
+        </div>
+        <p className="text-white text-lg md:text-xl">
+          Do you wish there was one trusted place that handles everything - doctor consultation, medicines, physiotherapy, and blood tests - without breaking your budget?
+        </p>
+      </motion.div>
+    </div>
+  </div>
+</section>
      
     </div>
   );
 }
 
 export default LandingPage;
-
-
-// const TestimonialSlider = () => {
-//   const testimonials = [
-//     {
-//       id: 1,
-//       name: "Menagapriya Munuswamy",
-//       time: "4 months ago",
-//       content: "Dr. Sai vigneshvar is one of the best doctor in Chromepet. He is listening all our queries very patiently and explain the solution very well.So I highly recommend Chromepet medical center for anyone seeking best medical care."
-//     },
-//     {
-//       id: 2,
-//       name: "Hema Hema",
-//       time: "7 months ago",
-//       content: "I had serious stomach upset. That is the first time I checked out with Dr. Sai Vigneshwar Sir, he is so patient in listening to. After I started with the medications referred, I felt so much releaf from pain. Thank you Sir. Let Sai Baba showers his blessings on you. 🙏"
-//     },
-//     {
-//       id: 3,
-//       name: "Pradeesh Guna",
-//       time: "2 years ago",
-//       content: "This review has been posted after the 4th consulting experience with Dr. Sai Vigneshwar. Being in the fitness industry, I have the opportunity to learn some up to date research papers on human health and wellness. Particularly on diabetics and lifestyle disorders. The suggestions, answers and the way of approach is very different from other doctors."
-//     },
-//     {
-//       id: 4,
-//       name: "Preethi s",
-//       time: "a year ago",
-//       content: "Dr Sai Vigneshvar is one of the most trust worthy doctors I have come across. He has a great approach towards his patients and gives us a feeling of comfort. He listens and addresses all our concerns patiently, that too for a person like me who has never ending questions and doubts."
-//     },
-//     {
-//       id: 5,
-//       name: "Sindhu Machado",
-//       time: "10 months ago",
-//       content: "Dr. Sai Vigneshwar is an approachable person he lends ears to all doubts. We a family of 9 including aged diabetic n hypertension patients got treated for Covid. Giving personal attention, he was all throughout suggesting practical lifestyle changes."
-//     },
-//     {
-//       id: 6,
-//       name: "Sadam Sadam",
-//       time: "11 months ago",
-//       content: "Dr Sai was an amazing person to give faithful trust on us💯 when ever we meet Him. I feel like totally curing my diabetes symtm. The pricing is also so reasonable and hence I highly recommend this place."
-//     }
-//   ];
-
-//   const sliderRef = useRef(null);
-//   const [currentIndex, setCurrentIndex] = useState(0);
-
-//   useEffect(() => {
-//     const interval = setInterval(() => {
-//       setCurrentIndex((prevIndex) => 
-//         prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1
-//       );
-//     }, 5000); // Change slide every 5 seconds
-
-//     return () => clearInterval(interval);
-//   }, [testimonials.length]);
-
-//   return (
-//     <section className="py-16 bg-[#08081b] relative overflow-hidden">
-//       <div className="max-w-7xl mx-auto px-6">
-//         <motion.h2 
-//           initial={{ opacity: 0, y: 20 }}
-//           whileInView={{ opacity: 1, y: 0 }}
-//           transition={{ duration: 0.6 }}
-//           viewport={{ once: true }}
-//           className="text-4xl md:text-5xl font-bold text-center text-white mb-16"
-//         >
-//           Patient <span className="text-yellow-500">Testimonials</span>
-//         </motion.h2>
-
-//         <div className="relative h-96 md:h-80">
-//           {testimonials.map((testimonial, index) => (
-//             <motion.div
-//               key={testimonial.id}
-//               className={`absolute inset-0 p-6 md:p-8 rounded-2xl bg-gradient-to-br from-[#1a1ac1] to-[#15243B] border border-gray-600 shadow-xl flex flex-col ${
-//                 index === currentIndex ? 'z-10' : 'z-0'
-//               }`}
-//               initial={{ opacity: 0, x: index === currentIndex ? 0 : (index < currentIndex ? -100 : 100) }}
-//               animate={{ 
-//                 opacity: index === currentIndex ? 1 : 0.3,
-//                 x: index === currentIndex ? 0 : (index < currentIndex ? -50 : 50),
-//                 scale: index === currentIndex ? 1 : 0.9
-//               }}
-//               transition={{ duration: 0.6, ease: "easeInOut" }}
-//             >
-//               <div className="flex-1 flex flex-col justify-center">
-//                 <p className="text-white text-lg md:text-xl mb-6 italic relative">
-//                   <span className="absolute top-0 left-0 text-5xl text-yellow-400 opacity-20">"</span>
-//                   {testimonial.content}
-//                   <span className="absolute bottom-0 right-0 text-5xl text-yellow-400 opacity-20">"</span>
-//                 </p>
-//                 <div className="mt-6">
-//                   <h4 className="text-yellow-400 text-xl font-semibold">{testimonial.name}</h4>
-                  
-//                 </div>
-//               </div>
-//             </motion.div>
-//           ))}
-//         </div>
-
-//         <div className="flex justify-center mt-8 space-x-2">
-//           {testimonials.map((_, index) => (
-//             <button
-//               key={index}
-//               onClick={() => setCurrentIndex(index)}
-//               className={`w-3 h-3 rounded-full transition-all duration-300 ${
-//                 index === currentIndex ? 'bg-yellow-400 w-6' : 'bg-gray-500'
-//               }`}
-//               aria-label={`Go to testimonial ${index + 1}`}
-//             />
-//           ))}
-//         </div>
-//       </div>
-
-//       {/* Decorative elements */}
-//       <div className="absolute -top-20 -left-20 w-64 h-64 rounded-full bg-yellow-400 opacity-10 blur-3xl"></div>
-//       <div className="absolute -bottom-20 -right-20 w-64 h-64 rounded-full bg-blue-500 opacity-10 blur-3xl"></div>
-//     </section>
-//   );
-// };

@@ -14,6 +14,7 @@
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -40,4 +41,12 @@
 
 .read-the-docs {
   color: #888;
+}
+
+
+@font-face {
+  font-family: 'Product Sans';
+  src: url('/ProductSansRegular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }

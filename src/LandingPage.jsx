@@ -22,11 +22,12 @@ import option1 from "./assets/tick.png"
 import option2 from "./assets/ogphoto2-removebg.png"
 import option3 from "./assets/ogphoto3-removebg.png"
 import option4 from "./assets/ogphoto4-removebg.png"
-import option5 from "./assets/ogphoto5-removebg.png"
+import option5 from "./assets/photo.png"
 import option6 from "./assets/Frame.png"
 import option7 from "./assets/design.png"
 import option8 from "./assets/newdoctor.png"
 import logo from "./assets/logo.png"
+import logo2 from "./assets/logo2.png"
 import { useRef, useEffect } from 'react';
 
 import { Helmet } from 'react-helmet-async';
@@ -183,7 +184,7 @@ function LandingPage() {
         
       <img src={option6} alt="Doctor" className="absolute md:right-0 mt-42 w-100 z-10 h-100 md:w-200 -z-10  md:h-200 object-cover " />
       <img src={option7} alt="Doctor"  className="w-88 z-20 h-88 md:w-210  md:h-96 translate-x-5 object-cover object-top " />
-      <img src={option8} alt="Doctor" style={{ filter: 'drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3))' }} className="absolute ml-5 md:right-2 bottom-28 md:mt-32 w-82 z-20 h-82 md:w-175 md:h-170 object-cover object-top " />
+      <img src={option5} alt="Doctor" style={{ filter: 'drop-shadow(0 5px 10px rgba(0, 0, 0, 0.3))' }} className="absolute ml-5 md:right-2 bottom-23 md:mt-32 w-82 z-20 h-82 md:w-240 md:h-240 object-cover object-top " />
     </div>
   </motion.div>
 
@@ -198,10 +199,10 @@ function LandingPage() {
     transition={{ duration: 0.8 }}
     className="bg-[#fffffff] rounded-xl text-black text-centerw-full mx-auto"
   >
-    <h1 className="text-4xl md:text-4xl  font-semibold">
+    <h1 className="text-4xl md:text-6xl  font-semibold">
         Get Started with a Personal Consultation
     </h1>
-    <p className="text-lg md:text-2xl my-8 ">
+    <p className="text-lg md:text-2xl my-8 font-semibold">
       Fill the Form Below
     </p>
     <form onSubmit={handleSubmit}>
@@ -216,7 +217,7 @@ function LandingPage() {
       value={formData.name}
       onChange={handleChange}
      
-      className="p-4 rounded-md bg-[#D62164]/20 text-black border border-[#D62164] w-full" />
+      className="p-4 rounded-2xl bg-[#FDEFFF] text-black border border-[#D62164] h-20 text-2xl" />
 
 {/* <input 
       required
@@ -234,7 +235,7 @@ function LandingPage() {
             name="contact"
             placeholder="Contact Number"
             value={formData.contact}
-            onChange={handleChange} className="p-4 rounded-md bg-[#D62164]/20 text-black border border-[#D62164] w-full" />
+            onChange={handleChange} className="p-4 rounded-2xl bg-[#FDEFFF] text-black border border-[#D62164] w-full h-20 text-2xl" />
 
 
       <input 
@@ -244,7 +245,34 @@ function LandingPage() {
             placeholder="Place"
             value={formData.place}
             onChange={handleChange}
-            className="p-4 rounded-md bg-[#D62164]/20 text-black border border-[#D62164] w-full" />
+            className="p-4 rounded-2xl bg-[#FDEFFF] text-black border border-[#D62164] w-full h-20 text-2xl" />
+
+            <input 
+      required
+            type="text"
+            name="age"
+            placeholder="Age"
+            value={formData.place}
+            onChange={handleChange}
+            className="p-4 rounded-2xl bg-[#FDEFFF] text-black border border-[#D62164] w-full h-20 text-2xl" />
+
+            <input 
+      required
+            type="text"
+            name="gender"
+            placeholder="Gender"
+            value={formData.place}
+            onChange={handleChange}
+            className="p-4 rounded-2xl bg-[#FDEFFF] text-black border border-[#D62164] w-full h-20 text-2xl" />
+
+            <input 
+      required
+            type="text"
+            name="service"
+            placeholder="Service Required"
+            value={formData.place}
+            onChange={handleChange}
+            className="p-4 rounded-2xl bg-[#FDEFFF] text-black border border-[#D62164] w-full h-20 text-2xl" />
 
         <input 
       required
@@ -253,7 +281,7 @@ function LandingPage() {
             placeholder="Health Concern"
             value={formData.place}
             onChange={handleChange}
-            className="p-4 rounded-md bg-[#D62164]/20 text-black border border-[#D62164] w-full" />
+            className="p-4 rounded-2xl bg-[#FDEFFF] text-black border border-[#D62164]  w-full h-50 text-2xl" />
 
 {/* <select
   required
@@ -272,7 +300,7 @@ function LandingPage() {
 
 
     </div>
-    <button type='submit' className="mt-6 bg-[#5A2F88] text-white px-6 py-3 rounded-md font-bold hover:scale-105 transition-all">
+    <button type='submit' className="mt-6 bg-[#5A2F88] text-2xl text-white px-12 py-4 rounded-md  hover:scale-105 transition-all">
       Request A Callback
     </button>
     </form>
@@ -285,9 +313,12 @@ function LandingPage() {
 
     
       {/* Benefits Section */}
-      <section className="py-24 bg-[url('/public/bg2.jpg')] custom-bg opacity-90 h-screen bg-cover bg-bottom ">
-      
+      <section className="py-24 bg-[url('/public/bgimage.png')] custom-bg opacity-90 h-screen bg-cover bg-top ">
+      <div className="flex justify-end">
+  <img src={logo2} alt="Doctor" className="md:pt-0 md:w-116 mr-30" />
+</div>
         <div className="md:max-w-7xl md:mx-auto md:px-6">
+          
           <motion.h2 
             initial="hidden"
             whileInView="visible"
@@ -295,20 +326,18 @@ function LandingPage() {
             viewport={{ once: true }}
             className="md:text-3xl my-5 text-2xl font-semibold text-center text-transparent bg-clip-text bg-white mb-20"
           >
-              <p className='my-5 text-lg md:text-2xl text-black'>Since 1992, Parvathy Hospital has been a trusted name in healthcare, having treated over</p>
-            <p 
-  className="text-8xl md:text-[175px] font-bold text-[#582E86] tracking-tighter " 
-  style={{ textShadow: '4px 4px 10px rgba(88, 46, 134, 0.7)' }}
+              <p className='my-5 text-lg md:text-3xl text-black'><span className='font-bold'>Since 1992, Parvathy Hospital</span> has been a trusted name in healthcare, having treated over</p>
+           <p 
+  className="text-8xl md:text-[250px] font-sans font-bold text-[#582E86] tracking-tighter"
 >
-  50,000+ 
-
+  50,000+
 </p>
-<span className="block font-semibold md:tracking-[30px] tracking-[15px] text-4xl md:text-6xl mt-5 drop-shadow- text-black uppercase">
+<span className="block font-bold md:tracking-[40px] tracking-[15px] text-4xl md:text-6xl mt-10 text-black uppercase">
     patients
   </span>
 
-            <p className='md:text-2xl text-xl  mt-10 font-normal text-black'>Now, we’re bringing the same compassionate, affordable care closer to you—right in your neighborhood, with branches in <span className='font-bold'>Madambakkam, Pammal, and Guduvanchery. </span> </p>
-            <button type='submit' className="mt-6 bg-[#D62164] text-lg text-white px-6 py-3 rounded-xs mt-20 hover:scale-105 transition-all">
+            <p className='md:text-3xl text-xl  mt-10 font-semibold text-black'>Now, we’re bringing the same compassionate, affordable care closer to you—right in your neighborhood, with branches in <span className='font-bold'>Madambakkam, Pammal, and Guduvanchery. </span> </p>
+            <button type='submit' className="mt-6 bg-[#D62164] font-normal text-3xl text-white px-10 py-3 rounded-md mt-20 hover:scale-105 transition-all">
       Get Treated Today
     </button>
           </motion.h2>
@@ -324,7 +353,7 @@ function LandingPage() {
       whileInView="visible"
       variants={fadeIn}
       viewport={{ once: true }}
-      className="text-2xl md:text-4xl font-bold text-center mb-16"
+      className="text-2xl md:text-6xl font-semibold text-center mb-16"
     >
       What We Offer
     </motion.h2>
@@ -336,10 +365,18 @@ function LandingPage() {
         className="bg-[#E6D2FF]/70 p-8 max-w-lg shadow-xl shadow-black/25 rounded-lg shadow-md text-center"
       >
         <div className="h-84 flex justify-center">
-          <div className="text-[#5A2F88]">
-            <img src={icon1} alt="Service Icon" className="h-40 mt-10 bg-[#582E86] p-6 border-1 rounded-full" />
-          </div>
-        </div>
+  {/* square wrapper so the circle can never distort */}
+  <div className="mt-10 flex items-center justify-center
+                  w-40 h-40 rounded-full bg-[#582E86]
+                  ring-2 ring-[#582E98]
+                  ring-offset-15 ring-offset-[#E6D2FF]"> 
+    <img
+      src={icon1}
+      alt="Service Icon"
+      className="max-w-full max-h-full object-contain"
+    />
+  </div>
+</div>
         <h3 className="text-3xl -mt-15 font-bold mx-15 mb-4">Honest, Affordable Consultations</h3>
         <p className="text-black mx-15 text-lg">
           Low consultation fees for common ailments. No hidden charges, no unnecessary tests - just honest healthcare you can afford.
@@ -353,9 +390,16 @@ function LandingPage() {
       >
         <div className="h-84 flex  justify-center">
           {/* Space for icon */}
-          <div className="text-[#5A2F88]">
-            <img src={icon2} alt="Service Icon" className="h-40 mt-10 bg-[#582E86] p-6 border-1  rounded-full " />
-          </div>
+          <div className="mt-10 flex items-center justify-center
+                  w-40 h-40 rounded-full bg-[#582E86]
+                  ring-2 ring-[#582E98]
+                  ring-offset-15 ring-offset-[#E6D2FF]"> 
+    <img
+      src={icon2}
+      alt="Service Icon"
+      className="max-w-full max-h-full object-contain "
+    />
+  </div>
         </div>
         <h3 className="text-3xl mx-15 -mt-15 font-bold mb-4">Generic Medicines That Actually Work</h3>
         <p className="text-black mx-15 text-lg">
@@ -370,9 +414,16 @@ function LandingPage() {
       >
         <div className="h-84 flex justify-center">
           {/* Space for icon */}
-          <div className="text-[#5A2F88]">
-            <img src={icon3} alt="Service Icon" className="h-40 mt-10 bg-[#582E86] p-6 border-1  rounded-full " />
-          </div>
+          <div className="mt-10 flex items-center justify-center
+                  w-40 h-40 rounded-full bg-[#582E86]
+                  ring-2 ring-[#582E98]
+                  ring-offset-15 ring-offset-[#E6D2FF]"> 
+    <img
+      src={icon3}
+      alt="Service Icon"
+      className="max-w-full max-h-full object-contain"
+    />
+  </div>
         </div>
         <h3 className="text-3xl mx-15 -mt-15 font-bold mb-4">Home Healthcare Services at Budget Prices</h3>
         <p className="text-black mx-15 text-lg">
@@ -387,9 +438,16 @@ function LandingPage() {
       >
         <div className="h-84 flex justify-center">
           {/* Space for icon */}
-          <div className="text-[#5A2F88]">
-            <img src={icon4} alt="Service Icon" className="h-40 mt-10 bg-[#582E86] p-6 border-1  rounded-full " />
-          </div>
+          <div className="mt-10 flex items-center justify-center
+                  w-40 h-40 rounded-full bg-[#582E86]
+                  ring-2 ring-[#582E98]
+                  ring-offset-15 ring-offset-[#E6D2FF]"> 
+    <img
+      src={icon4}
+      alt="Service Icon"
+      className="max-w-full max-h-full object-contain"
+    />
+  </div>
         </div>
         <h3 className="text-3xl mx-15 -mt-15 font-bold mb-4">Complete Family Care Under One Roof</h3>
         <p className="text-black mx-15 text-lg">
@@ -402,7 +460,7 @@ function LandingPage() {
       <motion.button
         whileHover={{ scale: 1.05 }}
         whileTap={{ scale: 0.95 }}
-        className="bg-[#D62164] text-white px-8 py-4 rounded-md font-bold text-lg hover:bg-[#5A2F88] transition-colors"
+        className="bg-[#D62164] text-white px-8 py-4 rounded-md  text-3xl  transition-colors"
       >
         Book Your Affordable Consultation
       </motion.button>
@@ -412,13 +470,13 @@ function LandingPage() {
 
 {/* Common Problems Section */}
 <section className="py-20 bg-[#F7F0FF] px-6">
-  <div className="max-w-4xl mx-auto">
+  <div className=" mx-auto">
     <motion.h2 
       initial="hidden"
       whileInView="visible"
       variants={fadeIn}
       viewport={{ once: true }}
-      className="text-3xl text-black md:text-4xl font-bold text-center mb-12"
+      className="text-3xl text-black md:text-5xl font-bold text-center mb-12"
     >
       Are You Facing These Common Healthcare Problems?
     </motion.h2>
@@ -428,27 +486,13 @@ function LandingPage() {
       whileInView="visible"
       variants={fadeIn}
       viewport={{ once: true }}
-      className="text-xl text-black text-center mb-16 italic"
+      className="text-3xl text-black text-center mb-16 "
     >
       If any of these sound familiar, you're not alone...
     </motion.p>
 
-    <div className="space-y-4">
-      {/* Problem 1 */}
-      <motion.div 
-        initial="hidden"
-        whileInView="visible"
-        variants={fadeIn}
-        viewport={{ once: true }}
-        className="flex bg-[#582E86] p-4 rounded-lg items-start"
-      >
-        <div className="min-w-[40px] mr-4 flex justify-center">
-          <img src={option1} className="h-8 bg-[#D62164] p-2 rounded-md object-contain" alt="Tick icon"/>
-        </div>
-        <p className="text-white text-lg md:text-xl">
-          Do you postpone visiting the doctor because you're worried about expensive consultation fees and costly medicines?
-        </p>
-      </motion.div>
+    <div className="space-y-5 max-w-6xl  flex flex-col justify-self-center">
+      
 
       {/* Problem 2 */}
       <motion.div 
@@ -456,12 +500,12 @@ function LandingPage() {
         whileInView="visible"
         variants={fadeIn}
         viewport={{ once: true }}
-        className="flex bg-[#582E86] p-4 rounded-lg items-start"
+        className="flex bg-[#582E86] p-6 rounded-2xl items-start"
       >
-        <div className="min-w-[40px] mr-4 flex justify-center">
-          <img src={option1} className="h-8 bg-[#D62164] p-2 rounded-md object-contain" alt="Tick icon"/>
+        <div className="min-w-[60px] my-auto mr-4 flex justify-center">
+          <img src={option1} className="h-12 bg-[#D62164] p-2 rounded-md object-contain" alt="Tick icon"/>
         </div>
-        <p className="text-white text-lg md:text-xl">
+        <p className="text-white text-lg md:text-2xl ml-5">
           Are you tired of spending $500-800 every time someone in your family catches a simple cold or fever?
         </p>
       </motion.div>
@@ -472,12 +516,12 @@ function LandingPage() {
         whileInView="visible"
         variants={fadeIn}
         viewport={{ once: true }}
-        className="flex bg-[#582E86] p-4 rounded-lg items-start"
+        className="flex bg-[#582E86] p-6 rounded-2xl items-start"
       >
-        <div className="min-w-[40px] mr-4 flex justify-center">
-          <img src={option1} className="h-8 bg-[#D62164] p-2 rounded-md object-contain" alt="Tick icon"/>
+        <div className="min-w-[60px] my-auto mr-4 flex justify-center">
+          <img src={option1} className="h-12 bg-[#D62164] p-2 rounded-md object-contain" alt="Tick icon"/>
         </div>
-        <p className="text-white text-lg md:text-xl">
+        <p className="text-white text-lg md:text-2xl ml-5">
           Do you feel helpless when your child has fever at night, your back is aching, or you need blood tests but all the expensive clinics are closed?
         </p>
       </motion.div>
@@ -488,12 +532,12 @@ function LandingPage() {
         whileInView="visible"
         variants={fadeIn}
         viewport={{ once: true }}
-        className="flex bg-[#582E86] p-4 rounded-lg items-start"
+        className="flex bg-[#582E86] p-6 rounded-2xl items-start"
       >
-        <div className="min-w-[40px] mr-4 flex justify-center">
-          <img src={option1} className="h-8 bg-[#D62164] p-2 rounded-md object-contain" alt="Tick icon"/>
+        <div className="min-w-[60px] my-auto mr-4 flex justify-center">
+          <img src={option1} className="h-12 bg-[#D62164] p-2 rounded-md object-contain" alt="Tick icon"/>
         </div>
-        <p className="text-white text-lg md:text-xl">
+        <p className="text-white text-lg md:text-2xl ml-5">
           Are you frustrated with clinics that order unnecessary tests, charge $500+ for physiotherapy sessions, and make you travel to different places for consultation, medicines, and lab tests?
         </p>
       </motion.div>
@@ -504,12 +548,12 @@ function LandingPage() {
         whileInView="visible"
         variants={fadeIn}
         viewport={{ once: true }}
-        className="flex bg-[#582E86] p-4 rounded-lg items-start"
+        className="flex bg-[#582E86] p-6 rounded-2xl items-start"
       >
-        <div className="min-w-[40px] mr-4 flex justify-center">
-          <img src={option1} className="h-8 bg-[#D62164] p-2 rounded-md object-contain" alt="Tick icon"/>
+        <div className="min-w-[60px] my-auto mr-4 flex justify-center">
+          <img src={option1} className="h-12 bg-[#D62164] p-2 rounded-md object-contain" alt="Tick icon"/>
         </div>
-        <p className="text-white text-lg md:text-xl">
+        <p className="text-white text-lg md:text-2xl ml-5">
           Do you worry about your elderly parents' health - their joint pain, regular blood tests, and mobility issues - but hesitate due to the high cost of home visits and multiple clinic trips?
         </p>
       </motion.div>
@@ -520,12 +564,12 @@ function LandingPage() {
         whileInView="visible"
         variants={fadeIn}
         viewport={{ once: true }}
-        className="flex bg-[#582E86] p-4 rounded-lg items-start"
+        className="flex bg-[#582E86] p-6 rounded-2xl items-start"
       >
-        <div className="min-w-[40px] mr-4 flex justify-center">
-          <img src={option1} className="h-8 bg-[#D62164] p-2 rounded-md object-contain" alt="Tick icon"/>
+        <div className="min-w-[60px] my-auto mr-4 flex justify-center">
+          <img src={option1} className="h-12 bg-[#D62164] p-2 rounded-md object-contain" alt="Tick icon"/>
         </div>
-        <p className="text-white text-lg md:text-xl">
+        <p className="text-white text-lg md:text-2xl ml-5">
           Are you stressed about managing diabetes blood tests, blood pressure check-ups, and physiotherapy for back pain on your tight budget?
         </p>
       </motion.div>
@@ -536,15 +580,145 @@ function LandingPage() {
         whileInView="visible"
         variants={fadeIn}
         viewport={{ once: true }}
-        className="flex bg-[#582E86] p-4 rounded-lg items-start"
+        className="flex bg-[#582E86] p-6 rounded-2xl items-start"
       >
-        <div className="min-w-[40px] mr-4 flex justify-center">
-          <img src={option1} className="h-8 bg-[#D62164] p-2 rounded-md object-contain" alt="Tick icon"/>
+        <div className="min-w-[60px] my-auto mr-4 flex justify-center">
+          <img src={option1} className="h-12 bg-[#D62164] p-2 rounded-md object-contain" alt="Tick icon"/>
         </div>
-        <p className="text-white text-lg md:text-xl">
+        <p className="text-white text-lg md:text-2xl ml-5">
           Do you wish there was one trusted place that handles everything - doctor consultation, medicines, physiotherapy, and blood tests - without breaking your budget?
         </p>
       </motion.div>
+    </div>
+  </div>
+</section>
+
+{/* Why Choose Us Section - Table Layout */}
+<section className="py-20 bg-white px-6">
+  <div className="max-w-6xl mx-auto">
+    <motion.h2 
+      initial="hidden"
+      whileInView="visible"
+      variants={fadeIn}
+      viewport={{ once: true }}
+      className="text-3xl md:text-5xl font-bold text-center mb-16 text-black"
+    >
+      Why Families Choose Us Over Expensive Clinics
+    </motion.h2>
+
+    {/* Table Container */}
+    <div className="border-2 border-[#5A2F88] rounded-2xl overflow-hidden">
+      {/* Table Header */}
+      <div className="grid grid-cols-2 border-b-2 border-white">
+        <div className="bg-[#582E86] p-4 text-center border-r-2 border-white/25">
+          <h3 className="text-2xl md:text-3xl font-bold text-white">What You Get Here:</h3>
+        </div>
+        <div className="bg-black p-4 text-center">
+          <h3 className="text-2xl md:text-3xl font-bold text-white">What You Avoid</h3>
+        </div>
+      </div>
+      
+      {/* Table Rows */}
+      <div className="grid grid-cols-2">
+        {/* Left Column - What You Get */}
+        <div className="bg-[#582E86] p-6 border-r-2 border-white/25">
+          <ul className="space-y-4">
+            <li className="flex items-start border-b border-[#5A2F88]/30 pb-3">
+              <span className="text-white text-xl mr-2">•</span>
+              <span className="text-white text-lg">Honest affordable consultations</span>
+            </li>
+            <li className="flex items-start border-b border-[#5A2F88]/30 pb-3">
+              <span className="text-white text-xl mr-2">•</span>
+              <span className="text-white text-lg">Home physiotherapy</span>
+            </li>
+            <li className="flex items-start border-b border-[#5A2F88]/30 pb-3">
+              <span className="text-white text-xl mr-2">•</span>
+              <span className="text-white text-lg">Home blood test collection</span>
+            </li>
+            <li className="flex items-start border-b border-[#5A2F88]/30 pb-3">
+              <span className="text-white text-xl mr-2">•</span>
+              <span className="text-white text-lg">All services under one roof - no multiple clinic visits</span>
+            </li>
+            <li className="flex items-start border-b border-[#5A2F88]/30 pb-3">
+              <span className="text-white text-xl mr-2">•</span>
+              <span className="text-white text-lg">No unnecessary tests or procedures</span>
+            </li>
+            <li className="flex items-start border-b border-[#5A2F88]/30 pb-3">
+              <span className="text-white text-xl mr-2">•</span>
+              <span className="text-white text-lg">Open from 7AM to 11PM daily</span>
+            </li>
+            <li className="flex items-start border-b border-[#5A2F88]/30 pb-3">
+              <span className="text-white text-xl mr-2">•</span>
+              <span className="text-white text-lg">Walk-in appointments welcome</span>
+            </li>
+            <li className="flex items-start border-b border-[#5A2F88]/30 pb-3">
+              <span className="text-white text-xl mr-2">•</span>
+              <span className="text-white text-lg">Family-friendly environment</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-white text-xl mr-2">•</span>
+              <span className="text-white text-lg">30+ years of trusted service</span>
+            </li>
+          </ul>
+        </div>
+        
+        {/* Right Column - What You Avoid */}
+        <div className="bg-black p-6">
+          <ul className="space-y-4">
+            <li className="flex items-start pb-3">
+              <span className="text-white text-xl mr-2">•</span>
+              <span className="text-white text-lg">Profit-first healthcare approach</span>
+            </li>
+            <li className="flex items-start pb-3">
+              <span className="text-white text-xl mr-2">•</span>
+              <span className="text-white text-lg">Expensive consultation fees</span>
+            </li>
+            <li className="flex items-start pb-3">
+              <span className="text-white text-xl mr-2">•</span>
+              <span className="text-white text-lg">Expensive physiotherapy session charges</span>
+            </li>
+            <li className="flex items-start pb-3">
+              <span className="text-white text-xl mr-2">•</span>
+              <span className="text-white text-lg">Expensive branded medicine pressure</span>
+            </li>
+            <li className="flex items-start pb-3">
+              <span className="text-white text-xl mr-2">•</span>
+              <span className="text-white text-lg">Multiple trips to different clinics/labs</span>
+            </li>
+            <li className="flex items-start pb-3">
+              <span className="text-white text-xl mr-2">•</span>
+              <span className="text-white text-lg">Unnecessary diagnostic tests</span>
+            </li>
+            <li className="flex items-start pb-3">
+              <span className="text-white text-xl mr-2">•</span>
+              <span className="text-white text-lg">Limited working hours</span>
+            </li>
+            <li className="flex items-start  pb-3">
+              <span className="text-white text-xl mr-2">•</span>
+              <span className="text-white text-lg">Advance appointment hassles</span>
+            </li>
+            <li className="flex items-start pb-3">
+              <span className="text-white text-xl mr-2">•</span>
+              <span className="text-white text-lg">Impersonal corporate clinic feel</span>
+            </li>
+            <li className="flex items-start">
+              <span className="text-white text-xl mr-2">•</span>
+              <span className="text-white text-lg">Hidden charges and surprises</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    {/* Footer Button */}
+    <div className="mt-16 text-center">
+      <motion.button
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.95 }}
+        className="bg-[#D62164] text-white px-8 py-4 rounded-md text-xl md:text-2xl font-semibold transition-colors"
+      >
+        Book Your Affordable Consultation
+      </motion.button>
     </div>
   </div>
 </section>

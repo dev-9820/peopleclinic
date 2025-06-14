@@ -11,7 +11,7 @@ export default defineConfig({
    theme: {
     extend: {
       fontFamily: {
-        header: ['"Playfair Display"', 'serif'], // 'header' is a custom name
+        'google-sans': ['"Google Sans"', 'sans-serif'],
       },
     },
   }
